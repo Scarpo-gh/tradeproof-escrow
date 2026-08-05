@@ -1,0 +1,44 @@
+{
+  "network": {
+    "name": "Arc Testnet",
+    "chain_id": 5042002,
+    "reference_contract": "0x0747eef0706327138c69792bf28cd525089e4583"
+  },
+  "scope": "Synthetic invoices and test-USDC only. This evidence is separate from OutcomeRail and contains no credentials, wallet IDs, recovery data, private keys, or real customer information.",
+  "invoice": {
+    "invoice_ref": "INV-UAE-IGNYTE-001",
+    "invoice_hash_sha256": "b8b5bcb5e3df4cbf54a83b529e61c463e6d1b87b338b215aac00b9c6bbd5173b",
+    "delivery_proof_hash_sha256": "1287263291a7420db6d6fb84653c4d291dd33817db62d130c00a9eb0d3ed3f84"
+  },
+  "completion_job": {
+    "job_id": 168870,
+    "budget_test_usdc": "1",
+    "terminal_event": "JobCompleted",
+    "terminal_event_topic": "0x0fd54bd364fa9e67f17b091aefe930932c09fe7651cf5ad02c71a418f3341444",
+    "steps": [
+      {"name": "create", "tx_hash": "0x01f529e8f7dc54e2f3f468ba80efe23c11fddf4c6da188193245c4fab1c02ba4", "block": 55477337, "status": "0x1"},
+      {"name": "set_budget", "tx_hash": "0xb515c8729902c12fbce6a17d851c429625d4c7d4cba8faa43a5d741627087d9a", "block": 55477425, "status": "0x1"},
+      {"name": "approve", "tx_hash": "0x7d2b23bcb51fc8f2ce6c04b455573e84fd527c40bac406c68ee30d1942a00f05", "block": 55477434, "status": "0x1"},
+      {"name": "fund", "tx_hash": "0x19393a723b84370c8103149589ba9b0a902aef12fea638cbf66cc9b00037aff5", "block": 55477439, "status": "0x1"},
+      {"name": "submit_delivery_proof", "tx_hash": "0xcfa9ae6190974801aeb029a12ff14d7da4c2c9c858fee2d46bed7bb4a5935edd", "block": 55477445, "status": "0x1"},
+      {"name": "complete", "tx_hash": "0x793f99fa68c20dbeb2e0cba9342f5d733d1b97ed9a693c1f8e87c470e83aa28b", "block": 55477449, "status": "0x1"}
+    ]
+  },
+  "refund_job": {
+    "job_id": 168872,
+    "budget_test_usdc": "1",
+    "terminal_event": "Refunded",
+    "terminal_event_topic": "0x7ca5472b7ea78c2c0141c5a12ee6d170cf4ce8ed06be3d22c8252ddfc7a6a2c4",
+    "steps": [
+      {"name": "create", "tx_hash": "0x7607997856f678d99c9805e9890aee6944c78a91fc649ca94302a6ae44b988dd", "block": 55477491, "status": "0x1"},
+      {"name": "set_budget", "tx_hash": "0x85f9e6b6d11a125e06c7c0eeabb8d7a4fdc118927c17fdd2cdf6f939b0e4b13a", "block": 55477583, "status": "0x1"},
+      {"name": "approve", "tx_hash": "0xa9f5e234822bb7be4f7c7ddd97e8cf2359f48792ab68e4bfb49c8dcc865f38cc", "block": 55477588, "status": "0x1"},
+      {"name": "fund", "tx_hash": "0x3a80b0c6461bb88701cfc75d5df31d25c0bc98f21749e978e5118750822cedd9", "block": 55477596, "status": "0x1"},
+      {"name": "claim_refund_after_expiry", "tx_hash": "0xdb33fefc16c1101101cf99ca2a11580e04d6bf9990b91fee966f461eb6d81338", "block": 55478723, "status": "0x1"}
+    ]
+  },
+  "verification": {
+    "method": "Each listed transaction receipt was queried from rpc.testnet.arc.network after Circle reported COMPLETE. All 11 receipts have status 0x1. JobCompleted and Refunded topics were additionally matched against the reference contract event signatures.",
+    "arcscan_base_url": "https://testnet.arcscan.app/tx/"
+  }
+}
