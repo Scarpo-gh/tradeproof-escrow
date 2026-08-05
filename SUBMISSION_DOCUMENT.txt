@@ -29,6 +29,8 @@ Architecture documentation: https://github.com/Scarpo-gh/tradeproof-escrow/blob/
 
 4. CIRCLE PRODUCTS USED
 
+Circle Account Email: onurakfirat@gmail.com
+
 - USDC on Arc Testnet
 - Circle Developer-Controlled Wallets
 
@@ -44,7 +46,7 @@ The static demo runs entirely in the browser: it deterministically hashes a synt
 
 6. VIDEO DEMO
 
-Video URL: https://github.com/Scarpo-gh/tradeproof-escrow/blob/main/docs/demo/tradeproof-demo-narrated.mp4
+Video URL: https://scarpo-gh.github.io/tradeproof-escrow/demo/tradeproof-demo-narrated.mp4
 
 The 47-second narrated walkthrough shows the synthetic invoice form, deterministic hash boundary, the verified Arc Testnet completion job, the separate expiry/refund job, and the explicit testnet-only safety boundary.
 
