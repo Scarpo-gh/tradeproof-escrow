@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 from dataclasses import asdict
+from pathlib import Path
 from uuid import uuid4
 
 from fastapi import FastAPI, HTTPException, status
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from tradeproof.domain import Invoice, ValidationError, canonical_invoice_hash
@@ -85,6 +87,8 @@ def create_app() -> FastAPI:
         invoice_ref, job = stored
         return _response(job_id, invoice_ref, job)
 
+    web_dir = Path(__file__).resolve().parents[2] / "web"
+    app.mount("/", StaticFiles(directory=web_dir, html=True), name="web")
     return app
 
 

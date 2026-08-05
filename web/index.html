@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TradeProof Escrow — Testnet Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <p class="eyebrow">ARC TESTNET · SYNTHETIC INVOICES · TEST-USDC ONLY</p>
+    <h1>TradeProof Escrow</h1>
+    <p class="lede">Create a deterministic invoice instruction for a proof-backed SME settlement demo. This interface never asks for a wallet, private key, or real funds.</p>
+
+    <section class="panel">
+      <h2>Create demo invoice</h2>
+      <form id="invoice-form">
+        <label>Invoice reference<input name="invoice_ref" value="INV-UAE-001" required></label>
+        <label>Buyer<input name="buyer" value="UAE Demo Buyer LLC" required></label>
+        <label>Supplier<input name="supplier" value="Global Demo Supplier Ltd" required></label>
+        <label>Amount (USDC cents)<input name="amount_minor" type="number" min="1" value="10000" required></label>
+        <label>Delivery deadline<input name="delivery_deadline" type="datetime-local" value="2026-08-09T12:00" required></label>
+        <input name="currency" type="hidden" value="USDC">
+        <button type="submit">Create testnet instruction</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-live="polite">
+      <h2>Instruction result</h2>
+      <p id="status">No invoice instruction created yet.</p>
+      <pre id="result">—</pre>
+    </section>
+
+    <aside>
+      <strong>Safety boundary:</strong> educational demo only. No production settlement, custody, KYC/AML decision, real USDC, or user wallet connection.
+    </aside>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
