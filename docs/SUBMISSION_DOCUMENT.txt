@@ -38,7 +38,9 @@ The project uses the predeployed Arc ERC-8183 reference contract. It does not cl
 
 GitHub repository: https://github.com/Scarpo-gh/tradeproof-escrow
 
-The repository includes setup instructions, deterministic domain and state-machine tests, the guarded Arc execution adapter, architecture documentation, and a public evidence bundle. Secrets, recovery material, private keys, wallet IDs, and raw credential files are excluded.
+Public static demo: https://scarpo-gh.github.io/tradeproof-escrow/
+
+The static demo runs entirely in the browser: it deterministically hashes a synthetic invoice and provides direct, read-only Arcscan links to the verified completion and refund evidence. The repository includes setup instructions, deterministic domain and state-machine tests, the guarded Arc execution adapter, architecture documentation, and the public evidence bundle. Secrets, recovery material, private keys, wallet IDs, and raw credential files are excluded.
 
 6. VIDEO DEMO
 

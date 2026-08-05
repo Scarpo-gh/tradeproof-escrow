@@ -14,7 +14,7 @@ The working prototype includes:
 - a local browser/API demo that never accepts a wallet or credential;
 - separate, verified Arc Testnet completion and expiry-refund jobs using bounded test-USDC.
 
-See the [Arc Testnet evidence bundle](docs/evidence/arc-testnet-2026-08-05/README.md), [architecture](docs/ARCHITECTURE.md), and [Circle product feedback](docs/CIRCLE_PRODUCT_FEEDBACK.md).
+See the [public static demo](https://scarpo-gh.github.io/tradeproof-escrow/), [Arc Testnet evidence bundle](docs/evidence/arc-testnet-2026-08-05/README.md), [architecture](docs/ARCHITECTURE.md), and [Circle product feedback](docs/CIRCLE_PRODUCT_FEEDBACK.md).
 
 ## Local checks
 
