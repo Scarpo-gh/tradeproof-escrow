@@ -17,7 +17,9 @@ The frontend, backend deployment, and separately verified Arc Testnet evidence a
 ## Local checks
 
 ```bash
-PYTHONPATH=src pytest -q
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt pytest httpx
+PYTHONPATH=src .venv/bin/python -m pytest -q
 ```
 
 ## Submission boundary
