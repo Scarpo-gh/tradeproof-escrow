@@ -42,9 +42,9 @@ The repository includes setup instructions, deterministic domain and state-machi
 
 6. VIDEO DEMO
 
-Video URL: https://github.com/Scarpo-gh/tradeproof-escrow/blob/main/docs/demo/tradeproof-demo.mp4
+Video URL: https://github.com/Scarpo-gh/tradeproof-escrow/blob/main/docs/demo/tradeproof-demo-narrated.mp4
 
-The 47-second captioned demo shows the synthetic invoice form, deterministic hash boundary, the verified Arc Testnet completion job, the separate expiry/refund job, and the explicit testnet-only safety boundary.
+The 47-second narrated walkthrough shows the synthetic invoice form, deterministic hash boundary, the verified Arc Testnet completion job, the separate expiry/refund job, and the explicit testnet-only safety boundary.
 
 7. CIRCLE PRODUCT FEEDBACK
 
