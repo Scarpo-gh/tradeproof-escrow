@@ -1,0 +1,55 @@
+TRADEPROOF ESCROW
+Ignyte Stablecoin Commerce Stack Challenge
+Track: Best SME Trade Finance & Working Capital Workflow (Invoices, Escrow, Settlement)
+
+1. PROJECT SUMMARY
+
+TradeProof Escrow is an educational, testnet-only workflow for a synthetic UAE-to-global SME supplier invoice. It creates a canonical invoice instruction, binds it to a SHA-256 invoice hash and a delivery-proof hash, and demonstrates a bounded test-USDC lifecycle on Arc Testnet.
+
+The demo does not process real invoices or payments. It does not connect a user wallet, custody funds, perform KYC/AML checks, make credit decisions, or operate on mainnet.
+
+2. WORKING MVP
+
+The browser interface collects synthetic invoice fields. The FastAPI backend validates the input and creates a deterministic invoice hash. A fail-closed local state model permits only:
+
+DRAFT → FUNDED → COMPLETED
+or
+DRAFT → FUNDED → REFUNDED after expiry.
+
+The Arc evidence contains two separate jobs:
+
+- Job A: a 1 test-USDC synthetic invoice job whose delivery-proof hash is submitted and completed.
+- Job B: a separate 1 test-USDC job that reaches expiry and takes the refund path.
+
+3. ARCHITECTURE
+
+Browser demo → FastAPI backend → canonical synthetic invoice JSON → SHA-256 invoice/proof hashes → Arc Testnet ERC-8183 reference contract → completion or expiry/refund evidence.
+
+Architecture documentation: https://github.com/Scarpo-gh/tradeproof-escrow/blob/main/docs/ARCHITECTURE.md
+
+4. CIRCLE PRODUCTS USED
+
+- USDC on Arc Testnet
+- Circle Developer-Controlled Wallets
+
+The project uses the predeployed Arc ERC-8183 reference contract. It does not claim usage of USYC, StableFX, CCTP/Bridge Kit, Gateway, or Nanopayments.
+
+5. CODE AND DOCUMENTATION
+
+GitHub repository: https://github.com/Scarpo-gh/tradeproof-escrow
+
+The repository includes setup instructions, deterministic domain and state-machine tests, the guarded Arc execution adapter, architecture documentation, and a public evidence bundle. Secrets, recovery material, private keys, wallet IDs, and raw credential files are excluded.
+
+6. VIDEO DEMO
+
+Video URL: TO BE ADDED AFTER FINAL PUBLIC MP4 VERIFICATION
+
+The video will show the synthetic invoice form, deterministic hash output, the Arc Testnet completion job, the separate expiry/refund job, and the explicit testnet-only safety boundary.
+
+7. CIRCLE PRODUCT FEEDBACK
+
+See: https://github.com/Scarpo-gh/tradeproof-escrow/blob/main/docs/CIRCLE_PRODUCT_FEEDBACK.md
+
+8. SAFETY AND NON-GOALS
+
+This is not a production escrow service. It makes no claim about regulatory compliance, merchant onboarding, custody, creditworthiness, KYC/AML status, real AED conversion, or real USDC settlement. All business parties, invoices, delivery proofs, and amounts shown in the demo are synthetic.
