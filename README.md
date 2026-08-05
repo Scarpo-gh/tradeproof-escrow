@@ -6,13 +6,15 @@ A testnet-only invoice-escrow workflow for the Ignyte Stablecoin Commerce Stack 
 
 ## Status
 
-The initial domain layer is implemented and tested:
+The working prototype includes:
 
 - deterministic canonical invoice hashing;
 - fail-closed local escrow lifecycle (`DRAFT → FUNDED → COMPLETED` or `REFUNDED`);
-- delivery-proof matching and expiry-refund guards.
+- delivery-proof matching and expiry-refund guards;
+- a local browser/API demo that never accepts a wallet or credential;
+- separate, verified Arc Testnet completion and expiry-refund jobs using bounded test-USDC.
 
-The frontend, backend deployment, and separately verified Arc Testnet evidence are in progress.
+See the [Arc Testnet evidence bundle](docs/evidence/arc-testnet-2026-08-05/README.md), [architecture](docs/ARCHITECTURE.md), and [Circle product feedback](docs/CIRCLE_PRODUCT_FEEDBACK.md).
 
 ## Local checks
 

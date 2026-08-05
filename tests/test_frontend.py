@@ -13,6 +13,9 @@ def test_root_serves_invoice_form_without_secret_fields():
     assert 'name="invoice_ref"' in response.text
     assert "privateKey" not in response.text
     assert "seed phrase" not in response.text.lower()
+    assert "Verified Arc Testnet evidence" in response.text
+    assert "Job 168870" in response.text
+    assert "Job 168872" in response.text
 
 
 def test_frontend_script_targets_only_public_demo_endpoints():
